@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    font-size: 1rem;
+    color: #155263;
+
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #155263;
+    background-color: #FFF6E9;
+    padding: 8px 8px 0px 0px;
+    height: 24vh;
+
+}
+
+.cabecalho img {
+    width: 10%;
+}
+
+.conteudo {
+    background-color: #FF9A3C;
+    display: flex;
+    flex-direction: column;
+
+}
+
+a {
+    text-decoration: none;
+    color: #155263;
+    padding: 8px;
+    font-size: 1.3rem;
+}
+
+a:hover {
+    color: #FF6F3C;
+}
+
+.servicos {
+    display: flex;
+    justify-content: center;
+}
+
+.servicos img {
+    width: 30%;
+    margin: 8px 0 8px 8px;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+.banhotosa:hover {
+    width: 40%;
+    font-size: 100%;
+}
+
+.descricaobanhotosa {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+
+}
+
+article {
+    background-color: #FFF6E9;
+    width: 40%;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+    margin: 9px;
+}
+
