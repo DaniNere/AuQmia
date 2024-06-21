@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,14 +11,20 @@ html, body {
     flex-direction: column;
 }
 
-h1, h2 {
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: 400; /* Peso regular */
-        text-align: center;       
+h1, h2, p {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400; /* Peso regular */
+    text-align: center;       
 }
- 
+
+main {
+flex-direction: column;
+display: flex;
+align-items:flex-start;
+
+}
 .background {
-    background: url('../img/sua-imagem.jpg') no-repeat top right fixed;
+    
     background-size: cover; /* Cobrir todo o espaço da seção */
     height: 170vh; /* Altura total da viewport */
     width: 30%; /* Largura da seção */
@@ -34,11 +39,12 @@ h1, h2 {
     text-align: center; /* Alinha texto ao centro */
     padding: 20px; /* Adiciona espaçamento interno */
     box-sizing: border-box; /* Mantém o padding dentro do tamanho especificado */
-
+    z-index: -1; /* Coloca atrás de todo o conteúdo */
 }
+
 body {
     padding-bottom: 80px;
-    font-family: 'Ubuntu'; 
+    font-family: 'Ubuntu', sans-serif; 
     text-align: left;  
 }
 
@@ -76,31 +82,36 @@ body {
     font-size: 3rem;
 }
 
+
 .corpo {
     width: 80%;
     max-width: 30rem;
-    margin: 20px auto;
+    margin: 20px 20px 20px 0; 
     padding: 20px;
     
+}
+.conteudo{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .form-container {
     padding: 16px;
-    width: 300px;
-    margin: auto;
-    
+    width: 100%;
+    margin-right: 20;
 }
 
 .form-group {
     margin-bottom: 20px;
-    
 }
 
 .form-group label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    
 }
 
 .form-group input, .form-group textarea {
@@ -145,13 +156,12 @@ button:hover {
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-
-    }
+}
 
 .contato-whatsapp img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /
+    object-fit: contain;
 }
 
 .contato-whatsapp:hover {
@@ -166,3 +176,81 @@ footer {
     width: 100%;
     bottom: 0;
 }
+/*
+Media Queries
+*/
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 40px 16px;
+    }
+  
+    .cabecalho h1 {
+        font-size: 2.5rem;
+    }
+  
+    .corpo {
+        width: 95%; /* Reduz a largura do corpo */
+        max-width: 100%; /* Ajusta a largura máxima */
+        margin: 20px auto;
+        padding: 20px;
+    }
+  
+    .form-container {
+        max-width: 95%; /* Reduz a largura do formulário */
+        padding: 16px;
+    }
+  
+    .form-group input,
+    .form-group textarea {
+        padding: 8px; /* Reduz o preenchimento dos campos de formulário */
+        font-size: 0.9rem; /* Reduz o tamanho da fonte dos campos de formulário */
+    }
+  
+    button {
+        padding: 12px 20px; /* Ajusta o preenchimento do botão */
+        font-size: 1rem; /* Ajusta o tamanho da fonte do botão */
+    }
+  
+    .background {
+        width: 100%; /* Ajusta a largura da seção de fundo */
+        height: 150vh; /* Altura total da viewport */
+        background-position: center; /* Centraliza a imagem de fundo */
+    }
+  }
+  
+  /* Para telas menores que 480px */
+  @media (max-width: 480px) {
+    .cabecalho {
+        height: auto;
+        padding: 20px 8px;
+    }
+  
+    .cabecalho h1 {
+        font-size: 2rem;
+    }
+  
+    .corpo {
+        padding: 16px; /* Ajusta o preenchimento do corpo */
+    }
+  
+    .form-container {
+        padding: 12px; /* Ajusta o preenchimento do formulário */
+    }
+  
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.8rem; /* Reduz ainda mais o tamanho da fonte dos campos de formulário */
+    }
+  
+    button {
+        padding: 10px 16px; /* Ajusta o preenchimento do botão */
+        font-size: 0.9rem; /* Reduz ainda mais o tamanho da fonte do botão */
+    }
+  
+    .background {
+        display: none;
+    }
+  }
+  
