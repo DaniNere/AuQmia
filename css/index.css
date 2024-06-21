@@ -11,9 +11,12 @@ html {
 
 }
 
-h1 {
-    font-size: 3rem;
+h1, h2, p {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    
 }
+
 
 .cabecalho {
     display: flex;
@@ -34,6 +37,7 @@ h1 {
     background-color: #FF9A3C;
     display: flex;
     flex-direction: column;
+    padding: 8px;
 
 }
 
@@ -51,6 +55,7 @@ a:hover {
 .servicos {
     display: flex;
     justify-content: center;
+    gap: 8px;
 }
 
 .servicos img {
@@ -62,20 +67,6 @@ h2 {
     text-align: center;
 }
 
-
-.banhotosa:hover {
-    width: 40%;
-    font-size: 100%;
-}
-
-.descricaobanhotosa {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-
-}
-
 article {
     background-color: #FFF6E9;
     width: 40%;
@@ -84,7 +75,101 @@ article {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    gap: 7px;
-    margin: 9px;
+    gap: 8px;
+    border-radius: 8px;
 }
 
+.breve-descricao {
+    margin-top: 16px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sobre  {
+    background-color: #FFF6E9;
+    text-align: center;
+    width: 40%;
+    border-radius: 8px;
+}
+
+button {
+    width: 10%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #155263;
+    color: #FFF6E9;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFF6E9;
+    color: black;
+    transform: translateY(-2px);
+}
+
+footer {
+    background-color: #155263;
+    color: #FFF6E9;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    bottom: 0;
+}
+
+.descricao_servico:hover {
+    transition: 0.5s;
+    box-shadow: 6px 6px 3px #155263;
+    transform: scale(1.02);
+}
+
+#botao_saibamais {
+    font-size: 1rem;
+    color: #FF9A3C;
+}
+
+
+@media (max-width: 480px) {
+    .servicos {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    .sobre {
+        width: 100%;
+    }
+
+    button {
+        width: 50%;
+    }
+
+    .cabecalho img {
+        display: none;
+    }
+
+    a {
+        font-size: 1.5rem;
+    }
+
+    .servicos img {
+        width: 40%;
+    }
+
+    .cabecalho h1 {
+        padding: 8px;
+    }
+}
