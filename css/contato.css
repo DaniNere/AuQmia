@@ -1,9 +1,47 @@
-*{
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-border: 0;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 400; /* Peso regular */
+        text-align: center;       
+}
+ 
+.background {
+    background: url('../img/sua-imagem.jpg') no-repeat top right fixed;
+    background-size: cover; /* Cobrir todo o espaço da seção */
+    height: 170vh; /* Altura total da viewport */
+    width: 30%; /* Largura da seção */
+    position: fixed; /* Fixa a seção na tela */
+    right: 0; /* Alinha a seção à direita */
+    top: 0; /* Alinha a seção no topo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    color: #fff; /* Cor do texto para contraste */
+    text-align: center; /* Alinha texto ao centro */
+    padding: 20px; /* Adiciona espaçamento interno */
+    box-sizing: border-box; /* Mantém o padding dentro do tamanho especificado */
+
+}
+body {
+    padding-bottom: 80px;
+    font-family: 'Ubuntu'; 
+    text-align: left;  
+}
+
 .cabecalho {
     display: flex;
     justify-content: space-between;
@@ -12,7 +50,6 @@ border: 0;
     background-color: #FF9A3C;
     padding: 8px 8px 0px 0px;
     height: 24vh;
-
 }
 
 .cabecalho nav {
@@ -36,34 +73,89 @@ border: 0;
 }
 
 .cabecalho h1 {
-    font-size: 3rem;    
+    font-size: 3rem;
+}
+
+.corpo {
+    width: 80%;
+    max-width: 30rem;
+    margin: 20px auto;
+    padding: 20px;
+    
 }
 
 .form-container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 30px2;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    font-family: Arial, sans-serif;
+    padding: 16px;
+    width: 300px;
+    margin: auto;
+    
 }
+
 .form-group {
     margin-bottom: 20px;
+    
 }
 
 .form-group label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    
 }
 
-.form-group textarea {
+.form-group input, .form-group textarea {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #FFF6E9;
+    border: 1px solid #0e0d0d;
     border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #155263;
+    color: #FFF6E9;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF9A3C;
+    color: black;
+    transform: translateY(-2px);
+}
+
+.contato-whatsapp {
+    position: fixed;
+    bottom: 80px;
+    right: 16px;
+    width: 56px;
+    height: 56px;
+    background-color: #90D26D;
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+    }
+
+.contato-whatsapp img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /
+}
+
+.contato-whatsapp:hover {
+    background-color: #FF9A3C;
 }
 
 footer {
@@ -71,7 +163,6 @@ footer {
     color: #FFF6E9;
     text-align: center;
     padding: 1rem;
-    position: fixed;
     width: 100%;
     bottom: 0;
 }
