@@ -1,6 +1,6 @@
                                                                   🐾 AuQmia - Site do Pet Shop 🐶
 
-                            
+
 Bem-vindo ao repositório do site do Pet Shop AuQmia. Este projeto é um site estático criado para apresentar os serviços e produtos oferecidos pelo AuQmia, um pet shop especializado. O site é projetado com HTML e CSS, e utiliza Google Fonts para tipografia personalizada.
 
 📋 Índice
@@ -46,5 +46,3 @@ Você pode simplesmente clicar duas vezes no arquivo index.html ou usar uma exte
 🤝 Contribuindo
 Contribuições são bem-vindas! Se você tiver sugestões ou encontrar problemas, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-📜 Licença
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.

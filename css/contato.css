@@ -50,16 +50,23 @@ body {
 
 .cabecalho {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     color: #155263;
     background-color: #FF9A3C;
     padding: 8px 8px 0px 0px;
     height: 24vh;
+    position: relative;
+}
+
+.logo-container {
+    flex: 1; /* Garante que a logo ocupe espaço à esquerda */
 }
 
 .cabecalho nav {
     display: flex;
+    margin-left: auto;
 }
 
 .cabecalho a {
@@ -74,21 +81,22 @@ body {
 }
 
 .cabecalho img {
-    height: 70px; /* Ajuste conforme necessário */
+    height: 100px; /* Ajuste conforme necessário */
     margin-right: 10px;
 }
 
 .cabecalho h1 {
     font-size: 3rem;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
-
-
 .corpo {
     width: 80%;
     max-width: 30rem;
     margin: 20px 20px 20px 0; 
     padding: 20px;
-    
 }
 .conteudo{
     
@@ -180,6 +188,25 @@ footer {
 Media Queries
 */
 
+/* Para telas menores que 1024px */
+@media (max-width: 1024px) {
+    .cabecalho {
+        padding: 20px;
+    }
+
+    .cabecalho h1 {
+        font-size: 2.5rem;
+    }
+
+    .cabecalho a {
+        font-size: 1.2rem;
+    }
+
+    .cabecalho img {
+        height: 60px;
+    }
+}
+
 /* Para telas menores que 768px */
 @media (max-width: 768px) {
     .cabecalho {
@@ -214,12 +241,9 @@ Media Queries
     }
   
     .background {
-        width: 100%; /* Ajusta a largura da seção de fundo */
-        height: 150vh; /* Altura total da viewport */
-        background-position: center; /* Centraliza a imagem de fundo */
+        background: none;
     }
   }
-  
   /* Para telas menores que 480px */
   @media (max-width: 480px) {
     .cabecalho {
